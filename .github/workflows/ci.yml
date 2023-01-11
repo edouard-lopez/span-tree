@@ -19,9 +19,12 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - run: npm install
       - run: npm run build
       - uses: ncipollo/release-action@v1
         with:
           artifacts: './spantree.zip'
           generateReleaseNotes: true
+          # tag: ${{github.ref}} # to debug in MR
