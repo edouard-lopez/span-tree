@@ -1,0 +1,26 @@
+name: Run tests on CI
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+
+jobs:
+  build-extension:
+    name: Build the build-extension and package it as a zip
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm run build
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: './spantree.zip'
+          generateReleaseNotes: true
