@@ -11,6 +11,7 @@
 ## 📖 About
 
 Browser extension that makes navigating a GitLab repository feel like a breeze by providing a familiar tree structure.<br>
+
 - [Chrome Extension](https://chrome.google.com/webstore/detail/spantree-gitlab-tree/gcjikeldobhnaglcoaejmdlmbienoocg)<br>
 - [Firefox Add-on](https://addons.mozilla.org/en-GB/firefox/addon/spantree-gitlab-tree)<br>
 
@@ -22,47 +23,22 @@ Browser extension that makes navigating a GitLab repository feel like a breeze b
 
 ## 💻 Development Setup
 
-Pre-Requisites:
+Install requirements:
 
-1. Install Node.js (v10.17.0)
+```console
+npm install
+```
 
-2. Install gulp-cli
+Build the extension (prepare files and package them):
 
-   ```
-   $ npm install -g gulp-cli
-   ```
+```console
+npm run build
+```
 
-Steps:
-
-1. Clone the repository to your local system
-
-2. Install all the dependencies
-
-   ```bash
-   $ npm install
-   ```
-
-3. Now to start the server which shall compile the extension in real time
-
-   ```
-   $ gulp watch
-   ```
-
-   (You'll observe a build folder being formed inside the project folder)
-
-4. Load the chrome extension from the build folder. ( first enable developer mode inside Chrome)
-
-   (For reference follow: https://thoughtbot.com/blog/how-to-make-a-chrome-extension)
+Finally, load the spantree.zip extension in your browser. In Chrome first [enable developer mode][chrome-dev-mode]
 
 ## 💳 Credits
 
-SpanTree uses the following open-source packages:
+[react](https://github.com/facebook/react) | [redux](https://github.com/reduxjs/redux) | [webext-redux](https://github.com/tshaddix/webext-redux) | [file-icons](https://github.com/file-icons/atom) | [dark-gitlab](https://gitlab.com/vednoc/dark-gitlab) | [axios](https://github.com/axios/axios) | [immer](https://github.com/immerjs/immer) | [fzy.js](https://github.com/jhawthorn/fzy.js)
 
-- [react](https://github.com/facebook/react)
-- [redux](https://github.com/reduxjs/redux)
-- [webext-redux](https://github.com/tshaddix/webext-redux)
-- [file-icons](https://github.com/file-icons/atom)
-- [dark-gitlab](https://gitlab.com/vednoc/dark-gitlab)
-- [axios](https://github.com/axios/axios)
-- [immer](https://github.com/immerjs/immer)
-- [fzy.js](https://github.com/jhawthorn/fzy.js)
+[chrome-dev-mode]: https://thoughtbot.com/blog/how-to-make-a-chrome-extension
