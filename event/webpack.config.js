@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: "event.js",
     path: path.join(__dirname, "../", "build"),
+    hashFunction: 'xxhash64'
   },
 
   resolve: {
