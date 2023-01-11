@@ -18,6 +18,6 @@ jobs:
       - run: npm run build
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: './spantree.zip'
+          artifacts: './spantree.xpi'
           generateReleaseNotes: true
           # tag: ${{github.ref}} # to debug in MR
