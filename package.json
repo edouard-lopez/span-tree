@@ -4,6 +4,8 @@
   "description": "Tree for Gitlab",
   "scripts": {
     "start": "gulp && gulp watch",
+    "prebuild": "gulp",
+    "build": "web-ext build --source-dir ./build/ --overwrite-dest --artifacts-dir ./ --filename spantree.zip",
     "export": "NODE_ENV=production npm start"
   },
   "author": "Taveesh Anand",
@@ -35,6 +37,13 @@
     "gulp-rename": "^2.0.0",
     "plugin-error": "^2.0.0",
     "rimraf": "^2.7.1",
+    "web-ext": "^7.4.0",
     "webpack": "^5.37.1"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "volta": {
+    "node": "18.13.0"
   }
 }
